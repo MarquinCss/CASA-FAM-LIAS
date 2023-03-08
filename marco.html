@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="Yellow" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="marco.css">
+	<link rel="shortcut icon" href="img/ico.avif" type="image/x-icon">
+	<title>Aceitação</title>
+</head>
+<body>
+<div class="fundo-video">
+			<video class="video" autoplay loop muted>
+				<source src="vidfam.mp4" type="video/mp4" />
+			</video>
+		</div>
+
+		
+
+<header Class="main-header"> 
+
+<img src="img/logo.png" class="logo"> </img>
+<nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="#trabalho">Trabalho</a></li>
+            <li><a href="#func">Funcionários</a></li>
+        </ul>
+    </nav>
+</header>
+		<main class="container">
+			<div class="informacoes">
+				<img class="imagem-titulo" src="aceitação.png"  data-aos="fade-up"
+     data-aos-duration="3000" alt="titulo do trabalho" />
+				<p  data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="descricao">
+	 O departamento da aceitação ajuda famílias a mais de 1 ano, esse ano se juntando as siglas C A S e formando esse lindo projeto chamado CASA, juntos ajudam famílias com todas as categorias de problemas e o propósito principal do departamento da aceitação é ajudar famílias que estão com problemas para aceitar alguma aceitação, nosso trabalho é essencial para manter a harmonia nas casas brasileiras sempre resolvendo os problemas com amor, respeito e compreensão. Se conseguimos ajudar a família Marchi, conseguimos ajudar você também.
+                    
+                </p>
+				<button class="botao-depoimento">Veja o Depoimento</button> 
+				
+			</div>
+			<img  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="family" src="family.png" />
+
+			<div class="modal">
+				<div class="conteudo-modal">
+					<span class="fechar-modal">X</span>
+				
+					<iframe width="560" height="315" id="video" src="https://www.youtube.com/embed/eNErLUZcUAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+	
+		</main>
+		<br><br><br><br>
+		<article  data-aos="fade-up"
+		data-aos-duration="3000">
+<p id="trabalho" class="descricao2"> Nosso trabalho é ajudar as famílias com problemas de aceitação em casa, seja com palestras, apresentações ou até mesmo atendimentos pessoais, assim ajudando as famílias brasileiras a viverem com harmonia. </p>
+<figure>
+<img data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000" src="https://kikacastro.files.wordpress.com/2014/12/familias.jpg?w=640" alt="">
+<figcaption>Nosso lema é: Todas as famílias são validas. </figcaption>
+</figure>
+		</article>
+		<br><br><br><br>
+	
+		<h2 id="func">Funcionários</h2>
+	<article class="func2">
+<!--1-->
+<section data-aos="fade-right" class="card">
+
+		<img id="marco" src="marco.png" alt="Arte1">
+		
+		<div>
+			<h3>Marco Marchi</h3>
+			<p>Assistente social</p>
+		   <a href="#" class="btn">Saiba Mais</a>
+		</div>
+		 </section>
+		<!--2-->
+		 <section class="card" data-aos="fade-left">
+		
+				<img id="amora" src="amora.jpg" alt="Arte2">
+				
+				<div>
+					<h3>Amora Marchi</h3>
+					<p>Conselheira</p>
+				   <a href="#" class="btn">Saiba Mais</a>
+				</div>
+				 </section>
+</article>
+<h1 id="fo">Fotos do projeto</h1>
+<article class="fotos">
+
+<img src="img/painho.jpg" alt="foto">
+<img src="img/mainha.jpg" alt="foto">
+<img src="img/painho2.jpg" alt="foto">
+<img src="img/family.jpeg" alt="foto">
+
+</article>
+
+<br><br><br>
+<footer>
+
+    <p>Nos encontrem também em nossas redes sociais.</p>
+    <p>Instagram: @<span>casasdefamilia</span></p>
+    <p>Casas de família LTDA</p>
+    <p>© 2023 - <a href="index.html">casasdefamilia.com.br</a></p>
+
+
+
+</footer>
+
+</body>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+	//barra de pesquisa estética feita com auxilio das redes
+//A declaração const cria uma variável cujo o valor é fixo, ou seja, uma constante somente leitura. Isso não significa que o valor é imutável, apenas que a variável constante não pode ser alterada ou retribuída.
+const botaoTrailer = document.querySelector(".botao-depoimento");
+//document.querySelector Retorna o primeiro elemento dentro do documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que corresponde ao grupo especificado de seletores.
+const botaoFecharModal = document.querySelector(".fechar-modal");
+//getElementById pega um elemento pelo id assim o "sistema" entende de onde ele deve pegar tal valor ou elemento.
+const video = document.getElementById("video");
+//aqui definimos const para video,modal e linkDoVideo 
+const modal = document.querySelector(".modal");
+// const linkDovideo é igual a o arquivo de video.src
+const linkDoVideo = video.src;
+
+function alternarModal(){
+	modal.classList.toggle("aberto");
+}
+
+botaoTrailer.addEventListener("click", () => {
+	alternarModal();
+	video.setAttribute("src", linkDoVideo);
+});
+//Abençoado Stackoverflow 
+botaoFecharModal.addEventListener("click", () => {
+	alternarModal();
+	video.setAttribute("src", "");
+});
+</script>
+</html>
+
+
+

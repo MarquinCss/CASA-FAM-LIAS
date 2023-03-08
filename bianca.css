@@ -1,0 +1,181 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family= Sassy+Frass & display família= Oswald:wght@200 & swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #797979;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    
+}
+
+a{
+    color: #797979;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.4;
+}
+
+img {
+    width: 100%;
+    height: 8vw;
+}
+
+nav {
+
+    background: #000;
+    height: 10vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+@media(max-width:999px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vw;
+        right: 0;
+        width: 50vw;
+        height: 92vw;
+        background: #797979;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+}
+
+.nav-list li{
+    letter-spacing: 0.2vw;
+    margin-left: 10vw;
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+span{
+    color: #d64b21;
+}
+
+.home{
+    color: #3d3d3d;
+}
+
+.main-header{
+    height: 55vh;/*vh se baseia no tamanho da tela*/
+    padding: 8rem;
+    display: flex;/*para organizar o conteúdo*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.main-header h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+.main-header p{
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.text{
+    text-align: justify;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;/* para nao transbordar do container*/
+    padding: 0 2rem;
+}
+
+img{
+    width: 100%;
+}
+
+.card{
+    display: grid;/*aplicando sessoes para trabalhar com as ferramentas do lealt grid*/
+    grid-template-columns:repeat(2, 1fr); /*;para organizar a grade em colunas/* fr signica fração, quer dizer uma unidade/parte da coluna*/
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+    background: #d64b21 ;
+ }
+ 
+ .card h3{
+     margin-bottom: 2rem;
+ }
+ 
+ .card img{
+     height: 400px;
+ }
+ 
+ .card>div{
+     padding: 2rem;
+ } 
+ 
+ .card:nth-child(even) img{
+     order: 2;
+ }
+
+ .botao{
+    text-align:right;
+
+}
+
+.btn{
+    display: inline-block;
+    background: #000;
+    color: #d64b21;
+    padding: 0.6vw 1.0vw;
+    margin-top: 0.8vw;
+    cursor: pointer;
+    font-size: 1.7vw;
+    border-radius: 25px;
+    
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
+
+footer{
+    display:block;
+    position:fixed;
+    width: 100%;
+    bottom: 0vh;
+    left: 0;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.7vw;
+    color: #797979;
+
+}

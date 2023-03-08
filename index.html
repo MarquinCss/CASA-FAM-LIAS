@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="img/ico.avif" type="image/x-icon">
+	<title>CASA - Página Inicial</title>
+</head>
+<body>
+<!-- marco-->
+<header Class="main-header"> 
+
+<img src="img/logo.png" class="logo"> </img>
+<nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="#missao">Missão</a></li>
+            <li><a href="#visao">Visão</a></li>
+            <li><a href="#valo">Valores</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="mensagem"></div>
+<br><br><br>
+  <form class="search-container">
+    <input autocomplet="on" list = "familias" type="text" id="familia" placeholder="Qual departamento deseja buscar?">
+   <img  onclick="redirecionar()" class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+
+<datalist id="familias">
+  <option id="mm" value="Marco">
+  <option id="eg" value="Evelyn">
+  <option id="bg" value="Bianca">
+  <option id="rb" value="Rafael">
+</datalist>
+</form>
+<br><br><br>
+<div class="images">
+
+<a href="rafael.html"><img src="img/B.png"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt="Barreto"> </a>
+
+<a href="bianca.html"><img src="img/G.png" id="gomes"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt="Gomes"> </a>
+
+<a href="marco.html"><img src="img/M.png"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt="Marchi"> </a>
+
+<a href="evelyn.html"><img src="img/V.png"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" alt="V"> </a>
+
+
+
+</div>
+</div>
+<br><br><br><br>
+<!--Evelyn-->
+<h1>Nossa família é a nossa <br> <span> CASA </span></h1>
+
+  <main data-aos="fade-right"
+  data-aos-offset="300"
+  data-aos-easing="ease-in-sine">
+
+  <section class="principal">
+      <div class="texto">
+          <h2 id="missao" class="titulo">Missão</h2>
+          <p class="texto2">Nossa missão é provar <br> que existem vários tipos <br> de família.</p>
+      </div>
+      <img class="imagem" src="https://raw.githubusercontent.com/evelyneggres/homepage/main/family.webp" alt="imagem ilustrativa de uma família">
+  </section>
+
+
+<!--do Rafa a partir daqui-->
+<section  data-aos="fade-left"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine" class="principal2">
+  <div class="texto">
+  <br><br>
+      <h2  id="visao" class="titulo"> Visão</h2>
+      <p class="texto2">Queremos que reconheçam a <br> diversidade dentro de um <br> ambiente familiar</p>
+  </div>
+  <img class="imagem" id="f" src="https://media-public.canva.com/WC2oo/MAEZjTWC2oo/1/t.png" alt="imagem ilustrativa de uma família">
+</section>
+
+<br><br><br>
+<!--Bianca aqui-->
+<div data-aos="fade-right"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine" class="valores">
+<img id="bi" src="https://media-public.canva.com/fXJvU/MAEZjffXJvU/1/s.png" alt="">
+ <div class="letras">
+
+ <h1 class="val">Valores</h1>
+
+  <p id="valo"> <a href="rafael.html"></a><span>C</span>onvivência</p><br>
+  <p> <a href="evelyn.html"></a><span>A</span>utenticidade</p><br>
+  <p> <a href="bianca.html"></a> <span>S</span>olidariedade</p><br>
+  <p> <a href="marco.html"></a><span>A</span>ceitação</p><br>
+</div>
+</div>
+  </section>
+  </main>
+<br><br><br>
+  <div class="botao">
+      <a href="index.html" class="btn"> VOLTAR PARA O INÍCIO</a>
+  </div>
+  <BR> <br>
+  <br>
+  <br>
+<footer>
+
+    <p>Nos encontrem também em nossas redes sociais.</p>
+    <p>Instagram: @<span>casasdefamilia</span></p>
+    <p>Casas de família LTDA</p>
+    <p>© 2023 - <a href="index.html">casasdefamilia.com.br</a></p>
+
+
+
+</footer>
+
+
+<script>
+  //by Marco Marchi
+ function redirecionar() {
+  var familia = document.getElementById("familia").value;
+  if (familia === "Marco" || familia === "Evelyn" || familia === "Bianca" || familia === "Rafael") {
+    var mensagem = "Redirecionando para família de " + familia + "...";
+    document.getElementById("mensagem").innerHTML = mensagem;
+    setTimeout(function() {
+      window.location.href = familia.toLowerCase() + ".html";
+    }, 2000);
+  } else {
+    alert("Opção inválida. Escolha entre Marco, Evelyn, Bianca ou Rafael.");
+  }
+}
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>

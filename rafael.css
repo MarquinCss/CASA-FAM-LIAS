@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+    word-wrap:break-word ;
+    overflow-wrap: break-word;
+    overflow-x:hidden;
+}
+
+
+.main-header{	
+    width:100%;
+    background-color:#A42B12;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height:60px;
+    overflow:hidden;
+    }
+    
+    .main-header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap:50px;
+        font-size:21px;
+        position:relative;
+        right:20px;
+    }
+    
+    .main-header nav ul li a {
+        color:black;
+        text-decoration: none;
+        padding: 10px;
+    }
+    
+    .main-header nav ul li a:hover {
+        background-color: 	#8B0000;
+        border-radius:50px;
+    }
+    
+    .main-header img{
+        margin-left:100px;
+        width:150px;
+        height:90px;
+    
+    }
+
+.main-header #rb{
+    width: 200px;
+    height: 210px;
+    bottom:14px;
+    padding: 200px;
+    position:absolute;
+    left: 600px;
+    background-repeat:no-repeat;
+}
+
+h1{
+position: relative;
+height: 20px;
+
+text-align: center;
+
+}
+
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background-image: url(https://thumbs.dreamstime.com/b/ultra-papel-de-parede-da-tecnologia-sci-fi-do-sum%C3%A1rio-hd-apropriado-para-aplica%C3%A7%C3%A3o-o-desktop-fundo-bandeira-contexto-c%C3%B3pia-e-112324880.jpg);
+}
+
+h1 span {
+    color: red;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.modelo p{
+    margin-bottom: 40px;
+}
+
+p{
+    text-indent: 5px;
+    text-align: justify;
+}
+
+section.modelo:last-child{
+    margin-bottom: 0;
+}
+
+section.modelo h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.modelo.content{
+    padding: 40px 0;
+    background: rgb(30, 30, 30);
+}
+
+section.modelo.parallax{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 100vh !important;
+width: 100%;
+position: relative;
+overflow: hidden;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+-webkit-background-size: cover ;
+-moz-background-size: cover;
+-moz-background-size: cover ;
+}
+
+section.modelo.parallax-1{
+    background-image: url(eu2.png);
+    background-size: 500px;
+    
+}
+
+section.modelo.parallax::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30%, #000 120% );
+}
+
+section.modelo.parallax-2{
+    background-image: url(prima.jpeg);
+}
+
+section.modelo.parallax-3{
+    background-image: url(mana.jpeg);
+    background-size: 850px;
+}
+
+
+section.modelo.parallax h1{
+    color: rgb(255, 230, 0);
+    text-align: center;
+    font-size: 78px;
+    z-index: 50;
+
+}
